@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Surprise</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f3f4f7;
+            color: #333;
+            padding: 50px;
+        }
+        h1 {
+            color: #e63946;
+        }
+        .message {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-top: 20px;
+            display: none;
+        }
+        select {
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        .heart {
+            font-size: 50px;
+            color: #e63946;
+            display: none;
+        }
+        .scroll-message {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #333;
+            overflow-y: auto;
+            height: 150px;
+            padding: 15px;
+            border: 2px solid #e63946;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 A Special Message Just for You mutheee😌❤️💖</h1>
+
+    <div class="scroll-message">
+        <p>Scroll down to uncover a surprise message...</p>
+        <p>You're the light of my life, the one who makes my heart skip a beat. No matter how far we are, you are always close in my thoughts...</p>
+        <p>Every moment with you, even from afar, feels special. You make everything brighter with your love and warmth. 💕</p>
+        <p>I can’t wait to see you , but until then, know that my love for you is endless i love youuuuu mutheee. 💘</p>
+    </div>
+
+    <select id="loveSelector">
+        <option value="0">Choose a heart... ❤️</option>
+        <option value="1">❤️</option>
+        <option value="2">💖</option>
+        <option value="3">💘</option>
+        <option value="4">💝</option>
+    </select>
+
+    <div class="message">
+        <p>💖 I love you so much! 💖</p>
+        <p>No matter the distance, you are always in my heart. 💘</p>
+        <p>Every day I think about you, and my love for you only grows stronger. 💝</p>
+        <p>Can't wait to be with you again. ❤️</p>
+    </div>
+
+    <div class="heart" id="heartIcon">❤️</div>
+
+    <script>
+        // Show the message when the page loads
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.message').style.display = 'block';
+                document.querySelector('.scroll-message').style.display = 'block';
+            }, 2000); // Delay in showing the message
+        };
+
+        // Show a heart when a selection is made
+        document.getElementById('loveSelector').addEventListener('change', function() {
+            var heart = document.getElementById('heartIcon');
+            var selectedValue = this.value;
+            if (selectedValue == '1') {
+                heart.innerHTML = '❤️';
+            } else if (selectedValue == '2') {
+                heart.innerHTML = '💖';
+            } else if (selectedValue == '3') {
+                heart.innerHTML = '💘';
+            } else if (selectedValue == '4') {
+                heart.innerHTML = '💝';
+            } else {
+                heart.innerHTML = '';
+            }
+            heart.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
